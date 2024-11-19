@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: '#ff6347', 
-    fontSize: 20,    
+    fontSize: 19,    
     fontWeight: 'bold', 
   },
 });
