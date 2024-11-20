@@ -1,25 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './login/welcom'; // فایل جدید برای صفحه اول
+import SecondScreen from './login/registration'; // فایل برای صفحه دوم
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Hello, this is my first React Native app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="Second" component={SecondScreen} options={{ headerShown: false }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#add8e6',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  text: {
-    color: '#ff6347', 
-    fontSize: 19,    
-    fontWeight: 'bold', 
-  },
-});
