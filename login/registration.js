@@ -33,7 +33,7 @@ export default function LoginScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFF', // رنگ پس‌زمینه
+    backgroundColor: '#ّّFFFF', // رنگ پس‌زمینه مشکی
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   title: {
-    color: '#FFFFFF', // رنگ سفید برای متن
+    color: '#FFFFFF',
     fontSize: 18,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -66,6 +66,11 @@ const styles = StyleSheet.create({
     marginTop: 20,
     paddingHorizontal: 10,
     width: '100%',
+    backgroundColor: '#FFFFFF',
+  },
+  inputContainerFocused: {
+    borderColor: '#436FF2', // رنگ آبی در حالت فوکوس
+    borderWidth: 2,
   },
   countryCode: {
     color: '#000000',
@@ -80,9 +85,9 @@ const styles = StyleSheet.create({
     color: '#000000',
   },
   button: {
-    backgroundColor: '#436FF2', // رنگ آبی برای دکمه
+    backgroundColor: '#436FF2',
     paddingVertical: 12,
-    paddingHorizontal: 120,
+    paddingHorizontal: 145,
     borderRadius: 25,
     marginBottom: 40,
   },
